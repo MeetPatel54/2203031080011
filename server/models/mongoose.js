@@ -1,7 +1,9 @@
 // models/mongoose.js
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+dotenv.config();
 
-mongoose.connect('mongodb+srv://2203031080011:pGS3gkiAqGOlCiSH@cluster0.csjwkp3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
